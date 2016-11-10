@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+            <title></title>
+            
+    </head>
+    <body>
+        
+        Not Autorized
+        
+        <form method="POST">
+    <input type="password" name="input" value=""/>
+</form>
+
+        
+    </body>
+</html>
+
