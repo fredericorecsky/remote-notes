@@ -13,6 +13,8 @@
     <form id="editor_form" method="POST" action="[% action %]">
         <textarea id="editor" name="content">[% content %]</textarea>
         <input type="submit">
+        <a href="/">[ List of Files ]</a>
+        <!-- Plugins --!>
     </form>
     
     <script>

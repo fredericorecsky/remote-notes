@@ -1,2 +1,14 @@
 
 <h1>[% title %]</h1>
+
+
+<ul>
+[% FOREACH file IN files %]
+    <li>
+        <a href="[% file %]">
+            [% file %]
+        </a>
+    </li>
+[% END %]
+</ul>
+

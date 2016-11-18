@@ -6,6 +6,7 @@ use Cwd;
 use Authen::OATH;
 use Convert::Base32 qw( decode_base32 );
 use Digest::MD5 qw/md5_hex/;
+use File::Finder;
 
 our $VERSION = '0.1';
 
@@ -17,12 +18,17 @@ if (! -d $directory . "/.notes/" ) {
     mkdir $directory . "/.notes/";
 }
 
-
 get '/' => sub {
     session( 'user' ) or redirect( '/recognize' );
 
-    template index => { title => "ooOO" };
+    my @files = grep { !/\.notes/ }
+                map { substr( $_, ( length $directory ) ) } 
+                File::Finder->in( $directory );
 
+    template index => { 
+        title   => "Files",
+        files   => \@files,
+    };
 };
 
 get '/recognize' => sub {
