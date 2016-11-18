@@ -55,5 +55,7 @@ engines:
 # notes = directory where the notes will be stored
 # secret = secret key to authenticator
 
-notes: 
-secret: 
+#notes: 
+#secret: 
+
+
